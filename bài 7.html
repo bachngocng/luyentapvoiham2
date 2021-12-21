@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number1 = parseInt(prompt("nhập số thứ nhất"));
+    let number2 = parseInt(prompt("nhập số thứ hai"));
+    function swapNumb () {
+        let arr = [];
+        arr.push(number1);
+        arr.push(number2);
+        let first = 0;
+        let last = arr.length -1;
+        while (first < last) {
+            let n = arr[first];
+            arr[first] = arr[last];
+            arr[last] = n;
+            first++;
+            last--;
+        }
+        return arr
+    }
+    let numbs = swapNumb();
+    document.write(numbs);
+</script>
+
+</body>
+</html>

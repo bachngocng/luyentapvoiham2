@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let text = prompt("nhập một dòng chữ bất kỳ");
+    let arr = text.split('');
+    let letter = prompt("nhập một kí tự bất kì");
+
+    function searchLetter() {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (letter === arr [i]) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    let count = searchLetter(arr);
+
+    if (count > 0) {
+        document.write(" kí tự " + letter + " xuất hiện " + count + " lần");
+    } else {
+        document.write(" không tìm thấy " + letter + " trong mảng ")
+    }
+
+</script>
+</body>
+</html>
